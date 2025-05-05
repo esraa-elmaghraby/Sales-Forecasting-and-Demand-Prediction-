@@ -59,7 +59,26 @@ p {
 div {
     color: #E0E0E0 !important;  
 }
-
+.stMetric {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid rgba(74, 144, 226, 0.5);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+.stMetric > div > div > div > div {
+    color: #FFFFFF !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+    font-weight: bold;
+}
+.stMetric:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 1);
+}
 .stDateInput > div > div, .stSelectbox > div > div {
     background-color: rgba(255, 255, 255, 0.15);
     color: #FFFFFF !important;
