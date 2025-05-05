@@ -59,23 +59,37 @@ p {
 div {
     color: #E0E0E0 !important;  
 }
-.stMarkdown {
-    color: #B0B0B0 !important; 
-}
-
 .stMetric {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    border: 1px solid #4A90E2;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid rgba(74, 144, 226, 0.5);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    width: 200px;  /* Reduced width for smaller metrics */
+    margin: 0 10px;  /* Spacing between metrics */
 }
 .stMetric > div > div > div > div {
     color: #FFFFFF !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 18px;  /* Reduced font size for better fit */
+    font-weight: bold;
+}
+.stMetric > div > div > div > div:first-child {
+    font-size: 14px;  /* Smaller font for the label */
 }
 .stMetric:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: transform 0.3s;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 1);
+}
+
+div[data-testid="stHorizontalBlock"] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 .stDateInput > div > div, .stSelectbox > div > div {
     background-color: rgba(255, 255, 255, 0.15);
@@ -197,11 +211,12 @@ footer {
 
 
 # KPIs
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("TOTAL SALES", "23.8M")
-col2.metric("AVG DAILY SALES", "780,952")
-col3.metric("NUMBER OF ITEMS", "4018")
-col4.metric("Forecast Accuracy (R²)", "77%")
+with st.container():
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("TOTAL SALES", "23.8M")
+    col2.metric("AVG DAILY SALES", "780,952")
+    col3.metric("NUMBER OF ITEMS", "4018")
+    col4.metric("Forecast Accuracy (R²)", "77%")
 
 st.markdown("---")
 
