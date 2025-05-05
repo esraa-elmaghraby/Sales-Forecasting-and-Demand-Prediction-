@@ -12,7 +12,7 @@ import plotly.express as px
 model = pickle.load(open("model.pkl", "rb"))
 @st.cache_data
 def load_data():
-    return pd.read_parquet("data/train_reduced.parquet")
+    return pd.read_parquet("Data/train_reduced.parquet")
 
 # Page settings
 st.set_page_config(page_title="Sales Forecasting", layout="wide")
