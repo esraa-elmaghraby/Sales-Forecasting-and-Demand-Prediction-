@@ -59,6 +59,10 @@ p {
 div {
     color: #E0E0E0 !important;  
 }
+.stMarkdown {
+    color: #B0B0B0 !important; 
+}
+
 .stMetric {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
@@ -77,7 +81,7 @@ div {
 .stMetric:hover {
     transform: scale(1.03);
     transition: transform 0.3s;
-    box-shadow: 0 0 15px rgba(74, 144, 226, 1);
+    box-shadow: 0 0 15px rgba(74, 144, 226, 1);
 }
 .stDateInput > div > div, .stSelectbox > div > div {
     background-color: rgba(255, 255, 255, 0.15);
@@ -200,14 +204,10 @@ footer {
 
 # KPIs
 col1, col2, col3, col4 = st.columns(4)
-with col1:
-    st.metric("TOTAL SALES", "23.8M")
-with col2:
-    st.metric("AVG DAILY SALES", "780,952")
-with col3:
-    st.metric("NUMBER OF ITEMS", "4018")
-with col4:
-    st.metric("Forecast Accuracy (R²)", "77%")
+col1.metric("TOTAL SALES", "23.8M")
+col2.metric("AVG DAILY SALES", "780,952")
+col3.metric("NUMBER OF ITEMS", "4018")
+col4.metric("Forecast Accuracy (R²)", "77%")
 
 st.markdown("---")
 
