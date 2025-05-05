@@ -211,12 +211,15 @@ footer {
 
 
 # KPIs
-with st.container():
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("TOTAL SALES", "23.8M")
-    col2.metric("AVG DAILY SALES", "780,952")
-    col3.metric("NUMBER OF ITEMS", "4018")
-    col4.metric("Forecast Accuracy (R²)", "77%")
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    st.metric("TOTAL SALES", "23.8M")
+with col2:
+    st.metric("AVG DAILY SALES", "780,952")
+with col3:
+    st.metric("NUMBER OF ITEMS", "4018")
+with col4:
+    st.metric("Forecast Accuracy (R²)", "77%")
 
 st.markdown("---")
 
