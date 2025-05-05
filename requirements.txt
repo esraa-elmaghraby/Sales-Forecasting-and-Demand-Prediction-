@@ -1,8 +1,9 @@
 streamlit==1.45.0
 pandas==2.2.3
 numpy==1.26.4
-scikit-learn==1.6.1
+scikit-learn==1.5.1
+lightgbm==4.6.0
+matplotlib==3.9.2
 plotly==6.0.1
-matplotlib==3.10.1
 altair==5.0.1
 rich==14.0.0
