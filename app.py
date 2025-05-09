@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder 
 import plotly.graph_objects as go
 import plotly.express as px
+import time
 
 # Load model
 model = pickle.load(open("model.pkl", "rb"))
@@ -210,6 +211,8 @@ col3.metric("NUMBER OF ITEMS", "4018")
 col4.metric("Forecast Accuracy (R²)", "77%")
 
 st.markdown("---")
+
+start_time = time.time()
 
 # Input
 train = load_data()
@@ -422,7 +425,8 @@ with left_col:
                 </div>
             """, unsafe_allow_html=True)
 
-
+end_time = time.time()
+st.write(f"Prediction time: {round(end_time - start_time, 2)} seconds")
 st.markdown("---")
 
 
