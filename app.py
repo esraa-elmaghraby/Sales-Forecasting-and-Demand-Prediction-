@@ -28,7 +28,25 @@ st.markdown("""
 st.markdown("""
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.stApp {
+        background-image: url("https://i.ibb.co/TMVJ4V1w/Wallpaper.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Roboto', sans-serif;
+    }
 
+    .stApp::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
 h1, h2, h3 {
     color: #FFFFFF !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
